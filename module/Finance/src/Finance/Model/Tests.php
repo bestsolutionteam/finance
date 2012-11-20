@@ -4,29 +4,17 @@ namespace Finance\Model;
 
 use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\Factory as InputFactory;
-use Zend\InputFilter\InputFilterAwareInterface;
-use Zend\InputFilter\InputFilterInterface;
 
-class Tests implements InputFilterAwareInterface {
+class Tests extends \Finance\Model\DefaultModel {
 
-	public $uid;
-	public $test;
-	protected $inputFilter;
+	public $result;
 
 	/**
 	 * Used by ResultSet to pass each database row to the entity
 	 */
 	public function exchangeArray($data) {
-		$this->uid = (isset($data['uid'])) ? $data['uid'] : null;
-		$this->test = (isset($data['test'])) ? $data['test'] : null;
-	}
-
-	public function getArrayCopy() {
-		return get_object_vars($this);
-	}
-
-	public function setInputFilter(InputFilterInterface $inputFilter) {
-		throw new \Exception("Not used");
+		parent::exchangeArray($data);
+		$this->result = (isset($data['result'])) ? $data['result'] : null;
 	}
 
 	public function getInputFilter() {

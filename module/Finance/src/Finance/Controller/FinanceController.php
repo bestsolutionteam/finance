@@ -46,21 +46,5 @@ class FinanceController extends AbstractActionController {
 		return $this->testsTable;
 	}
 
-	public function getUsersTable() {
-		if (!$this->usersTable) {
-			$serviceLocator = $this->getServiceLocator();
-			$this->usersTable = $serviceLocator->get('Finance\Model\UsersTable');
-		}
-		return $this->usersTable;
-	}
-
-	public function getAlbumTable() {
-		if (!$this->albumTable) {
-			$sm = $this->getServiceLocator();
-			$this->albumTable = $sm->get('Album\Model\AlbumTable');
-		}
-		return $this->albumTable;
-	}
-
 }
 

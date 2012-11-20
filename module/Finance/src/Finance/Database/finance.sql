@@ -4,8 +4,12 @@ DROP TABLE `tests`;
 CREATE TABLE `tests` (
 	`uid` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
 	`test` varchar(50) NOT NULL DEFAULT '',
+	`result` varchar(50) NOT NULL DEFAULT '',
 	PRIMARY KEY (`uid`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `finance`.`tests` (`uid`, `test`, `result`) VALUES ('1', 'test1', 'result1');
+INSERT INTO `finance`.`tests` (`uid`, `test`, `result`) VALUES ('2', 'test2', 'result2');
 
 DROP TALBE `album`;
 CREATE TABLE `album` (

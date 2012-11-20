@@ -2,3 +2,11 @@ LIST USERS
 <pre>
 <?php print_r($users) ?>
 </pre>
+
+<?php 
+foreach ($users as $user) {
+	echo '<pre>';
+	var_dump($user);
+	echo '</pre>';
+}
+?>
