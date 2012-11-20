@@ -13,10 +13,12 @@ namespace Finance\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
-class IndexController extends AbstractActionController {
+class MainController extends AbstractActionController {
 
 	public function indexAction() {
-        return new ViewModel();
+		return new ViewModel(array(
+			'hello' => 'Hello World'
+		));
 	}
 
 }
