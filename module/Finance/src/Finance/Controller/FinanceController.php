@@ -29,15 +29,11 @@ class FinanceController extends AbstractActionController {
 
 	public function listUsersAction() {
 
-//		$usersTable = $this->getTestsTable();
-//		$users = $usersTable->findAll();
-
-		$users = 'USERS LIST';
+		$users = $this->getTestsTable()->findAll();
 
 		return new ViewModel(
 						array(
 							'users' => $users,
-							'albums' => $this->getAlbumTable()->fetchAll(),
 						)
 		);
 	}
@@ -45,9 +41,17 @@ class FinanceController extends AbstractActionController {
 	public function getTestsTable() {
 		if (!$this->testsTable) {
 			$serviceLocator = $this->getServiceLocator();
-			$this->testsTable = $serviceLocator->get('Finance\Model\TestsTable');
+			$this->testsTable = $serviceLocator->get('Finance\Model\TestsRespository');
 		}
 		return $this->testsTable;
+	}
+
+	public function getUsersTable() {
+		if (!$this->usersTable) {
+			$serviceLocator = $this->getServiceLocator();
+			$this->usersTable = $serviceLocator->get('Finance\Model\UsersTable');
+		}
+		return $this->usersTable;
 	}
 
 	public function getAlbumTable() {

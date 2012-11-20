@@ -4,7 +4,7 @@ namespace Finance\Model;
 
 use Zend\Db\TableGateway\TableGateway;
 
-class TestsTable {
+class TestsRespository {
 
 	protected $tableGateway;
 
