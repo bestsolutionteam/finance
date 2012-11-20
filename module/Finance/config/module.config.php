@@ -24,14 +24,14 @@ return array(
 			// new controllers and actions without needing to create a new
 			// module. Simply drop new controllers in, and you can access them
 			// using the path /application/:controller/:action
-			'finace' => array(
-				'type' => 'Literal',
+			'finance' => array(
+				'type' => 'Zend\Mvc\Router\Http\Literal',
 				'options' => array(
-					'route' => '/finnace',
+					'route' => '/finance',
 					'defaults' => array(
 						'__NAMESPACE__' => 'Finance\Controller',
-						'controller' => 'Index',
-						'action' => 'index',
+						'controller' => 'Finance',
+						'action' => 'listUsers',
 					),
 				),
 				'may_terminate' => true,
@@ -69,7 +69,8 @@ return array(
 	),
 	'controllers' => array(
 		'invokables' => array(
-			'Finance\Controller\Main' => 'Finance\Controller\MainController'
+			'Finance\Controller\Main' => 'Finance\Controller\MainController',
+			'Finance\Controller\Finance' => 'Finance\Controller\FinanceController'
 		),
 	),
 	'view_manager' => array(
