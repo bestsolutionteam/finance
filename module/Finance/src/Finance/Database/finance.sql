@@ -2,14 +2,14 @@ use finance;
 
 DROP TABLE `tests`;
 CREATE TABLE `tests` (
-	`uid` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
 	`test` varchar(50) NOT NULL DEFAULT '',
 	`result` varchar(50) NOT NULL DEFAULT '',
-	PRIMARY KEY (`uid`)
+	PRIMARY KEY (`id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `finance`.`tests` (`uid`, `test`, `result`) VALUES ('1', 'test1', 'result1');
-INSERT INTO `finance`.`tests` (`uid`, `test`, `result`) VALUES ('2', 'test2', 'result2');
+INSERT INTO `finance`.`tests` (`id`, `test`, `result`) VALUES ('1', 'test1', 'result1');
+INSERT INTO `finance`.`tests` (`id`, `test`, `result`) VALUES ('2', 'test2', 'result2');
 
 DROP TALBE `album`;
 CREATE TABLE `album` (
@@ -18,6 +18,9 @@ CREATE TABLE `album` (
   `title` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 );
+INSERT INTO `finance`.`album` (`id`, `artist`, `title`) VALUES 
+('8', 'artist3', 'test2'), 
+('9', 'artist6', 'test9');
 
 DROP TABLE `users`;
 CREATE TABLE `users` (

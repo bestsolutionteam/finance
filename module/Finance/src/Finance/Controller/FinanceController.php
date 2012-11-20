@@ -29,8 +29,9 @@ class FinanceController extends AbstractActionController {
 
 	public function listUsersAction() {
 
-		$users = $this->getTestsTable()->findAll();
-
+		$users = $this->getTestsTable()->findAlbumByTest();
+		
+		$this->layout('layout/layout-1');
 		return new ViewModel(
 						array(
 							'users' => $users,
