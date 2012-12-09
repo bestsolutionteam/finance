@@ -82,15 +82,15 @@ return array(
 			/* If this guard is specified here (i.e. it is enabled), it will block
 			 * access to all routes unless they are specified here.
 			 */
-//			'BjyAuthorize\Guard\Route' => array(
-//				array('route' => 'zfcuser', 'roles' => array('user')),
-//				array('route' => 'zfcuser/logout', 'roles' => array('user')),
-//				array('route' => 'zfcuser/login', 'roles' => array('guest')),
+			'BjyAuthorize\Guard\Route' => array(
+				array('route' => 'zfcuser', 'roles' => array('user')),
+				array('route' => 'zfcuser/logout', 'roles' => array('user')),
+				array('route' => 'zfcuser/login', 'roles' => array('guest')),
 //				array('route' => 'zfcuser/register', 'roles' => array('guest')),
 				
 				// Below is the default index action used by the [ZendSkeletonApplication](https://github.com/zendframework/ZendSkeletonApplication)
 //				array('route' => 'home', 'roles' => array('guest', 'user')),
-//			),
+			),
 		),
 	),
 );
