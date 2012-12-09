@@ -4,6 +4,9 @@ return array(
 		'Album',
         'Application',
 		'Finance',
+		'ZfcBase',
+		'ZfcUser',
+		'BjyAuthorize',
     ),
     'module_listener_options' => array(
         'config_glob_paths'    => array(
@@ -12,6 +15,7 @@ return array(
         'module_paths' => array(
             './module',
             './vendor',
+			'./vendor/zf-commons',
         ),
     ),
 );
